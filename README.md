@@ -2,14 +2,14 @@
 
 link para design de exemplo: [Dribbble - Finance Mobile App Design](https://dribbble.com/shots/15167068-Finance-Mobile-App-Design)
 
-<img src="exemplo-image.png" alt="docs/image.png">
+<img src="docs/image.png" alt="imagem da tela final">
 
 ### Descrição
 
 Este projeto é um ui clone de um design disponibilizado pelo no [Dribbble](https://dribbble.com). Esse clone Não está completamente fidedigno pela dificuldade em identificar as fonts, e anexos usados no projeto. Esse projeto foi todo desenvolvido completamente em [flutter](https://flutter.dev).
 
 <p align="left">
-  <a href="mailto:iranjuniordev@gmail.com" alt="Gmail">
+  <a href="" alt="Gmail">
   <img src="https://img.shields.io/badge/-Gmail-FF0000?style=flat-square&labelColor=FF0000&logo=gmail&logoColor=white&link=mailto:iranjuniordev@gmail.com" /></a>
 
   <a href="https://linkedin.com/in/iran-junior" alt="Linkedin">
