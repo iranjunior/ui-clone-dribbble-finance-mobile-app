@@ -1,4 +1,4 @@
-import 'package:cards_control/page/home.dart';
+import 'package:cards_control/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Card Control',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Lexend',
