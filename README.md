@@ -2,7 +2,7 @@
 
 link para design de exemplo: [Dribbble - Finance Mobile App Design](https://dribbble.com/shots/15167068-Finance-Mobile-App-Design)
 
-<img src="docs/image.png" alt="imagem da tela final">
+<img src="docs/image.png" alt="imagem da tela final" height="500">
 
 ### Descrição
 
