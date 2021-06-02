@@ -2,7 +2,9 @@
 
 link para design de exemplo: [Dribbble - Finance Mobile App Design](https://dribbble.com/shots/15167068-Finance-Mobile-App-Design)
 
+<img src="docs/navigation.gif" alt="navegacao entre as páginas" height="500">
 <img src="docs/image.png" alt="imagem da tela final" height="500">
+<img src="docs/second_page.png" alt="imagem da segunda tela" height="500">
 
 ### Descrição
 
