@@ -3,8 +3,16 @@
 link para design de exemplo: [Dribbble - Finance Mobile App Design](https://dribbble.com/shots/15167068-Finance-Mobile-App-Design)
 
 <img src="docs/navigation.gif" alt="navegacao entre as páginas" height="500">
-<img src="docs/image.png" alt="imagem da tela final" height="500">
-<img src="docs/second_page.png" alt="imagem da segunda tela" height="500">
+<div style="display: flex;">
+  <div style="display:flex; flex-direction: column">
+    <h5>Tela inicial</h5>
+    <img src="docs/image.png" alt="imagem da tela final" height="400">
+  </div>
+   <div style="display:flex; flex-direction: column">
+    <h5>Tela da segunda página</h5>
+    <img src="docs/second_page.png" alt="imagem da segunda tela" height="400">
+  </div>
+</div>
 
 ### Descrição
 
