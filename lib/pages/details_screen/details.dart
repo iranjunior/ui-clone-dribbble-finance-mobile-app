@@ -1,6 +1,7 @@
 import 'package:cards_control/pages/details_screen/widgets/listTileDoubt.dart';
 import 'package:cards_control/widgets/base_page.dart';
 import 'package:cards_control/widgets/chart.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:unicons/unicons.dart';
@@ -81,7 +82,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Saved this mounth',
+                        AppLocalizations.of(context).savedThisMonth,
                         style: Theme.of(context).textTheme.subtitle1,
                       ),
                       SizedBox(height: 8),
@@ -98,7 +99,7 @@ class _DetailsPageState extends State<DetailsPage> {
           Flexible(flex: 4, child: LinearChat()),
           Spacer(),
           Expanded(
-            flex: 4,
+            flex: 5,
             child: Container(
               padding: const EdgeInsets.only(bottom: 24),
               decoration: BoxDecoration(

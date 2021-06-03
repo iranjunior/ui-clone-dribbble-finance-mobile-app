@@ -1,0 +1,12 @@
+{
+    "greetingUser": "Hi",
+    "greeting": "Welcome Back",
+    "titleBalance": "Balance",
+    "descriptionBalance": "Upcoming payments",
+    "paymentPrincipal": "Salary",
+    "paymentSecondary": "Paypal",
+    "paymentPrincipalDescription": "Belong Interactive",
+    "paymentSecondaryDescription": "Freelance payment",
+    "savedThisMonth": "Saved this month",
+    "historyCharts": "History"
+}

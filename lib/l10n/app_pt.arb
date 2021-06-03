@@ -1,0 +1,12 @@
+{
+    "greetingUser": "Oi,",
+    "greeting": "Bem vindo de volta",
+    "titleBalance": "Saldo",
+    "descriptionBalance": "Pagamentos recentes",
+    "paymentPrincipal": "Salário",
+    "paymentSecondary": "Paypal",
+    "paymentPrincipalDescription": "Recebido interativo",
+    "paymentSecondaryDescription": "freelance",
+    "savedThisMonth": "Valor acumulado esse mês",
+    "historyCharts": "Histórico"
+}

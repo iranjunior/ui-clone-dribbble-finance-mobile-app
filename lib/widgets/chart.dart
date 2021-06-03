@@ -1,3 +1,4 @@
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +46,7 @@ class _LinearChatState extends State<LinearChat> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
           child: Text(
-            'History',
+            AppLocalizations.of(context).historyCharts,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         )
