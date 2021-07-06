@@ -99,6 +99,9 @@ class DepositWidget extends StatelessWidget {
                 : '-\$ ${this.value.formatToMoney()}',
             style: Theme.of(context).textTheme.headline5,
           ),
+          SizedBox(
+            height: 8,
+          ),
         ],
       ),
     );
