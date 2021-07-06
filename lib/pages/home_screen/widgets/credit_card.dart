@@ -1,7 +1,99 @@
+import 'dart:math' as math;
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:cards_control/models/models.dart';
+
+class CardCreditSelected extends StatefulWidget {
+  const CardCreditSelected({
+    Key? key,
+    required this.currentCreditCard,
+  }) : super(key: key);
+  final CreditCardModel currentCreditCard;
+
+  @override
+  _CardCreditSelectedState createState() => _CardCreditSelectedState();
+}
+
+class _CardCreditSelectedState extends State<CardCreditSelected>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controllerAnimation;
+  late Animation<double> card1;
+  late Animation<double> card2;
+
+  @override
+  void initState() {
+    super.initState();
+    _controllerAnimation = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 1),
+    );
+    card2 = Tween(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _controllerAnimation,
+        curve: Interval(0.0, 0.5),
+      ),
+    )..addListener(() {
+        setState(() {});
+      });
+    card1 = Tween(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _controllerAnimation,
+        curve: Interval(0.51, 1),
+      ),
+    )..addListener(() {
+        setState(() {});
+      });
+    _controllerAnimation.forward();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: Alignment.bottomLeft,
+      children: [
+        Transform.scale(
+          scale: 0.86,
+          child: Transform.translate(
+            offset: Offset(
+              card1.value * 14.0,
+              card1.value * 44.0,
+            ),
+            child: Transform.rotate(
+              angle: card1.value * (math.pi / 8),
+              child: CreditCardContainer(),
+            ),
+          ),
+        ),
+        Transform.scale(
+          scale: 0.94,
+          child: Transform.translate(
+            offset: Offset(
+              card2.value * 20.0,
+              card2.value * 20.0,
+            ),
+            child: Transform.rotate(
+              angle: card2.value * (math.pi / 18),
+              child: CreditCardContainer(),
+            ),
+          ),
+        ),
+        CreditCard(
+          creditCard: widget.currentCreditCard,
+        ),
+      ],
+    );
+  }
+}
+
 class CreditCard extends StatelessWidget {
-  const CreditCard();
+  const CreditCard({
+    Key? key,
+    required this.creditCard,
+  }) : super(key: key);
+
+  final CreditCardModel creditCard;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +121,7 @@ class CreditCard extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    '5505 0671 4553 2642',
+                    this.creditCard.number,
                     style: Theme.of(context).textTheme.headline2,
                   ),
                 ],
@@ -54,7 +146,7 @@ class CreditCard extends StatelessWidget {
                                 height: 20,
                               ),
                               Text(
-                                'Ghulam',
+                                this.creditCard.holder,
                                 style: Theme.of(context).textTheme.overline,
                               ),
                             ],
@@ -74,7 +166,7 @@ class CreditCard extends StatelessWidget {
                                 height: 16,
                               ),
                               Text(
-                                'Mastercard',
+                                this.creditCard.brand,
                                 style: Theme.of(context).textTheme.overline,
                               ),
                             ],

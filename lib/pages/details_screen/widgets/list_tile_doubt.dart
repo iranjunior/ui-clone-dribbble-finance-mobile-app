@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'package:cards_control/extensions/concurrency.dart';
+
 class ListTileDoubt extends StatelessWidget {
   final String title;
   final String description;
-  final String icon;
+  final AssetImage icon;
   final double value;
-  final bool divider;
 
   const ListTileDoubt({
     Key? key,
@@ -13,7 +14,6 @@ class ListTileDoubt extends StatelessWidget {
     required this.description,
     required this.icon,
     required this.value,
-    required this.divider,
   }) : super(key: key);
 
   @override
@@ -24,8 +24,8 @@ class ListTileDoubt extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Image.asset(
-              'assets/${this.icon}',
+            Image(
+              image: this.icon,
               fit: BoxFit.fitWidth,
               height: 32,
               width: 32,
@@ -56,7 +56,7 @@ class ListTileDoubt extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Text(
-                    '\$${this.value}',
+                    '\$ ${this.value.formatToMoney()}',
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
                 ],
@@ -64,27 +64,10 @@ class ListTileDoubt extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(height: 24,),
-        this.divider ? dividerWidget() : SizedBox.shrink(),
-        SizedBox(height: 24,),
+        SizedBox(
+          height: 24,
+        ),
       ],
-    );
-  }
-
-  Widget dividerWidget() {
-    return Flex(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      direction: Axis.horizontal,
-      children: List.generate(
-          15,
-          (index) => Container(
-                height: 2,
-                width: 12,
-                color: Color(0xff373737),
-                child: SizedBox(
-                  width: 3,
-                ),
-              )),
     );
   }
 }

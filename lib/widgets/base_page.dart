@@ -30,7 +30,7 @@ class _BasePageState extends State<BasePage> {
 
   void onTap(index) {
     setState(() {
-      _currentIndex = 1;
+      _currentIndex = index;
     });
   }
 
